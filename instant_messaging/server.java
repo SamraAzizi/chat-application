@@ -3,36 +3,42 @@ import java.net.*;
 
 public class server {
     public static void main(String[] args) {
+        ServerSocket serverSocket = null;
+        Socket clientSocket = null;
+        PrintWriter out = null;
+        BufferedReader in = null;
+
         try {
-            ServerSocket serverSocket = new ServerSocket(5000);
+            serverSocket = new ServerSocket(12345);
             System.out.println("Server started. Waiting for clients...");
 
-            Socket clientSocket = serverSocket.accept();
-            System.out.println("Client connected.");
+            clientSocket = serverSocket.accept();
+            System.out.println("Client connected: " + clientSocket);
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+            out = new PrintWriter(clientSocket.getOutputStream(), true);
+            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-            BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
-
-            String inputLine, outputLine;
+            String inputLine;
             while ((inputLine = in.readLine()) != null) {
                 System.out.println("Client: " + inputLine);
-                if (inputLine.equals("bye")) // Exit condition
-                    break;
-
-                outputLine = consoleInput.readLine();
-                out.println(outputLine);
-                if (outputLine.equals("bye")) // Exit condition
-                    break;
+                out.println("Server received: " + inputLine);
             }
 
-            in.close();
-            out.close();
-            clientSocket.close();
-            serverSocket.close();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (in != null)
+                    in.close();
+                if (out != null)
+                    out.close();
+                if (clientSocket != null)
+                    clientSocket.close();
+                if (serverSocket != null)
+                    serverSocket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
