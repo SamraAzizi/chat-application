@@ -1,4 +1,3 @@
-package VoiceChat;
 
 //GUI
 import javax.swing.JButton;
@@ -94,3 +93,81 @@ public class VoiceChatClient {
         hostField.setText("127.0.0.1");
         portSpinner.setValue(5000);
     }
+    public static void connect() throws IOException, LineUnavailableException
+    {   
+        
+        Thread thread = new Receive();
+        thread.start();
+        
+	
+    }
+    public static void disconnect()
+    {
+        
+            //frame.dispose();
+            System.exit(0);
+    }
+    public static void main (String[] args) {
+        
+        new VoiceChatClient();
+    }
+}
+class Receive extends Thread 
+{
+    public void run() 
+    {   
+        int port=(Integer)VoiceChatClient.portSpinner.getValue();
+        String host=(String)VoiceChatClient.hostField.getText();       //"127.0.0.1";
+        Socket socket;
+	SourceDataLine speakers;
+        //for sending
+        TargetDataLine microphone = null;
+        
+        try{
+            //socket stuff starts here
+        VoiceChatClient.statusLbl.setText("Connecting...");    
+	socket = new Socket(host, port);
+	VoiceChatClient.statusLbl.setText("Connected!");
+        //socket stuff ends here
+        //input stream
+	InputStream in = socket.getInputStream();
+        //audioformat
+	AudioFormat format = new AudioFormat(16000, 8, 2, true, true);
+        //audioformat
+        //selecting and strating speakers
+        DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, format);
+        speakers = (SourceDataLine)AudioSystem.getLine(dataLineInfo);
+        speakers.open(format);
+        speakers.start();
+        
+        //for sending
+        OutputStream out = null;
+        out = socket.getOutputStream();
+        
+        //selecting and starting microphone
+        microphone = AudioSystem.getTargetDataLine(format);
+        DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
+        microphone = (TargetDataLine) AudioSystem.getLine(info);
+        microphone.open(format);
+        microphone.start();
+        
+        
+        byte[] bufferForOutput = new byte[1024];
+        int bufferVariableForOutput = 0;
+            
+        byte[] bufferForInput = new byte[1024];
+        int bufferVariableForInput;
+
+        while((bufferVariableForInput = in.read(bufferForInput)) > 0  || (bufferVariableForOutput=microphone.read(bufferForOutput, 0, 1024)) > 0) {
+            out.write(bufferForOutput, 0, bufferVariableForOutput);
+            speakers.write(bufferForInput, 0, bufferVariableForInput);
+                
+        }
+        }
+        catch(IOException | LineUnavailableException e)
+        {
+            e.printStackTrace();
+            //System.out.println("some error occured");
+        }
+    }
+}
