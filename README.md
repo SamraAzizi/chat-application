@@ -45,7 +45,7 @@ The server will start and wait for clients to connect.
 ## Client (VoiceChatClient.java)
 1. Compile the VoiceChatClient.java file.<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatClient.java
+&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatClient.java<br>
 2. Run the client.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;java VoiceChatClient
 
