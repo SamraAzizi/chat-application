@@ -17,10 +17,10 @@ java server
 The server will start and wait for clients to connect.
 
 ## Client (client.java)<br>
-3. Compile the client.java file.
+1. Compile the client.java file.
 
-javac client.java
-4. Run the client.
+javac client.java<br>
+2. Run the client.
 java client
 Enter messages in the client's console and press Enter to send them to the server. The client will receive responses from the server and display them in the console.
 
@@ -43,10 +43,10 @@ java VoiceChatServer
 The server will start and wait for clients to connect.
 
 ## Client (VoiceChatClient.java)
-3. Compile the VoiceChatClient.java file.
+1. Compile the VoiceChatClient.java file.
 
-## javac VoiceChatClient.java
-4. Run the client.
+javac VoiceChatClient.java<br>
+2. Run the client.<br>
 java VoiceChatClient
 
 Enter the host name and port number of the server in the GUI.
