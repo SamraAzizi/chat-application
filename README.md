@@ -12,14 +12,14 @@ Simple User Interface: Although not included in the code provided, the applicati
 1. Compile the server.java file.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;javac server.java
 
-2. Run the server.
-java server<br>
+2. Run the server.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;java server<br>
 &nbsp;&nbsp;&nbsp;&nbsp;The server will start and wait for clients to connect.
 
 ## Client (client.java)<br>
-1. Compile the client.java file.<br>
+1. Compile the client.java file.
 
-&nbsp;&nbsp;&nbsp;&nbsp;javac client.java
+&nbsp;&nbsp;&nbsp;&nbsp;javac client.java<br>
 2. Run the client.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;java client<br>
 Enter messages in the client's console and press Enter to send them to the server. The client will receive responses from the server and display them in the console.
@@ -35,7 +35,7 @@ Graphical User Interface (GUI): The application includes a graphical user interf
 ## Usage<br>
 ## Server (VoiceChatServer.java)*
 
-1. Compile the VoiceChatServer.java file.<br>
+1. Compile the VoiceChatServer.java file.
 &nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatServer.java
 
 2. Run the server.<br>
@@ -45,7 +45,7 @@ The server will start and wait for clients to connect.
 ## Client (VoiceChatClient.java)
 1. Compile the VoiceChatClient.java file.<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatClient.java
+&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatClient.java<br>
 2. Run the client.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;java VoiceChatClient
 
