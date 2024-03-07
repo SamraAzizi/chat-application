@@ -2,7 +2,7 @@
 
 This is a simple instant messaging application implemented in Java, consisting of a server (server.java) and a client (client.java). The server and client communicate over sockets to enable real-time messaging between multiple clients.
 
-##Features
+## Features
 Server-Client Communication: The server and client communicate over sockets, allowing messages to be sent and received in real-time.
 Simple User Interface: Although not included in the code provided, the application can be extended with a graphical or command-line user interface (UI) for a more user-friendly experience.
 
@@ -16,7 +16,7 @@ javac server.java
 java server
 The server will start and wait for clients to connect.
 
-##Client (client.java)<br>
+## Client (client.java)<br>
 3. Compile the client.java file.
 
 javac client.java
@@ -42,10 +42,10 @@ javac VoiceChatServer.java
 java VoiceChatServer
 The server will start and wait for clients to connect.
 
-##C lient (VoiceChatClient.java)
+## Client (VoiceChatClient.java)
 3. Compile the VoiceChatClient.java file.
 
-##j avac VoiceChatClient.java
+## javac VoiceChatClient.java
 4. Run the client.
 java VoiceChatClient
 
@@ -56,5 +56,5 @@ Click the "Connect" button to establish a voice chat connection.
 To hang up or quit the application, click the "Hang up/quit" button.
 
 
-##Contact
+## Contact
 For any questions or feedback, please feel free to contact the project maintainer at samarraazizi@gmail.com.
