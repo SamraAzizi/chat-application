@@ -19,9 +19,9 @@ java server<br>
 ## Client (client.java)<br>
 1. Compile the client.java file.<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;javac client.java<br>
+&nbsp;&nbsp;&nbsp;&nbsp;javac client.java
 2. Run the client.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;java client
+&nbsp;&nbsp;&nbsp;&nbsp;java client<br>
 Enter messages in the client's console and press Enter to send them to the server. The client will receive responses from the server and display them in the console.
 
 
@@ -45,7 +45,7 @@ The server will start and wait for clients to connect.
 ## Client (VoiceChatClient.java)
 1. Compile the VoiceChatClient.java file.<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatClient.java<br>
+&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatClient.java
 2. Run the client.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;java VoiceChatClient
 
