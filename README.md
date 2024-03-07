@@ -9,19 +9,19 @@ Simple User Interface: Although not included in the code provided, the applicati
 
 ## Usage<br>
 ## Server (server.java)
-1. Compile the server.java file.
-javac server.java
+1. Compile the server.java file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;javac server.java
 
 2. Run the server.
-java server
-The server will start and wait for clients to connect.
+java server<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The server will start and wait for clients to connect.
 
 ## Client (client.java)<br>
-1. Compile the client.java file.
+1. Compile the client.java file.<br>
 
-javac client.java<br>
-2. Run the client.
-java client
+&nbsp;&nbsp;&nbsp;&nbsp;javac client.java<br>
+2. Run the client.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;java client
 Enter messages in the client's console and press Enter to send them to the server. The client will receive responses from the server and display them in the console.
 
 
@@ -35,19 +35,19 @@ Graphical User Interface (GUI): The application includes a graphical user interf
 ## Usage<br>
 ## Server (VoiceChatServer.java)*
 
-1. Compile the VoiceChatServer.java file.
-javac VoiceChatServer.java
+1. Compile the VoiceChatServer.java file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatServer.java
 
-2. Run the server.
-java VoiceChatServer
+2. Run the server.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;java VoiceChatServer
 The server will start and wait for clients to connect.
 
 ## Client (VoiceChatClient.java)
-1. Compile the VoiceChatClient.java file.
+1. Compile the VoiceChatClient.java file.<br>
 
-javac VoiceChatClient.java<br>
+&nbsp;&nbsp;&nbsp;&nbsp;javac VoiceChatClient.java<br>
 2. Run the client.<br>
-java VoiceChatClient
+&nbsp;&nbsp;&nbsp;&nbsp;java VoiceChatClient
 
 Enter the host name and port number of the server in the GUI.
 
