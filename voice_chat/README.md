@@ -1,5 +1,3 @@
-
-
 # 2. Voice Chat Application
 This is a simple voice chat application implemented in Java, consisting of a client (VoiceChatClient.java) and a server (VoiceChatServer.java). The application allows users to establish a voice chat connection over a network, enabling real-time communication.
 
